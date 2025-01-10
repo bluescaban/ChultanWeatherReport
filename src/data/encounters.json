@@ -1,0 +1,110 @@
+{
+  "Port Nyanzaru": [
+    {
+      "title": "Wandering Merchant",
+      "effect": "Gain supplies if negotiated successfully.",
+      "stats": { "rations": 2 }
+    },
+    {
+      "title": "Festival Day",
+      "effect": "Boost party morale and gain supplies.",
+      "stats": { "rations": 3 }
+    }
+  ],
+  "Jungle": [
+    {
+      "title": "Pack of Velociraptors",
+      "effect": "Lose supplies unless defeated.",
+      "stats": {}
+    },
+    {
+      "title": "Giant Spiders",
+      "effect": "Players must save against poison or gain exhaustion.",
+      "stats": {}
+    }
+  ],
+  "River": [
+    {
+      "title": "Crocodile Ambush",
+      "effect": "Lose supplies unless defeated.",
+      "stats": { "rations": -2 }
+    },
+    {
+      "title": "Friendly Fishermen",
+      "effect": "Gain food and water supplies.",
+      "stats": { "rations": 2, "water": 1 }
+    }
+  ],
+  "Lake": [
+    {
+      "title": "Shimmering Lights",
+      "effect": "Discover a hidden fishing spot and gain water supplies.",
+      "stats": { "water": 3 }
+    },
+    {
+      "title": "Sudden Storm",
+      "effect": "Lose time and supplies due to the storm.",
+      "stats": { "rations": -2, "navigationDC": 5 }
+    }
+  ],
+  "Swamp": [
+    {
+      "title": "Quicksand",
+      "effect": "Lose supplies and test navigation skills.",
+      "stats": { "navigationDC": 18 }
+    },
+    {
+      "title": "Swamp Wraith",
+      "effect": "Encounter a hostile spirit draining the party's energy.",
+      "stats": { "exhaustion": 2 }
+    }
+  ],
+  "Coast": [
+    {
+      "title": "Pirate Raid",
+      "effect": "Fend off a pirate raid to protect supplies.",
+      "stats": { "rations": -3 }
+    },
+    {
+      "title": "Shipwreck",
+      "effect": "Discover valuable resources at a shipwreck.",
+      "stats": { "rations": 4, "water": 2 }
+    }
+  ],
+  "Mountain": [
+    {
+      "title": "Rockslide",
+      "effect": "Lose time and supplies.",
+      "stats": { "rations": -1, "navigationDC": 25 }
+    },
+    {
+      "title": "Eagle Attack",
+      "effect": "Fend off a giant eagle attacking the party.",
+      "stats": { "exhaustion": 1 }
+    }
+  ],
+  "Wasteland": [
+    {
+      "title": "Sandstorm",
+      "effect": "Lose supplies and visibility in a sudden sandstorm.",
+      "stats": { "rations": -3, "navigationDC": 30 }
+    },
+    {
+      "title": "Scavengers",
+      "effect": "Defend against scavengers trying to steal supplies.",
+      "stats": { "rations": -2 }
+    }
+  ],
+  "Omu": [
+    {
+      "title": "Undead Horde",
+      "effect": "Battle a group of undead creatures.",
+      "stats": {}
+    },
+    {
+      "title": "Hidden Trap",
+      "effect": "Avoid or disarm traps hidden within the ruins.",
+      "stats": {}
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "location": "Port Nyanzaru",
+  "isDay": true,
+  "encounter": null,
+  "weather": {
+    "stats": {
+      "water": 0,
+      "rations": 0,
+      "forageDC": 0,
+      "navigationDC": 0,
+      "navigationDisadvantage": false,
+      "forageDisadvantage": false
+    },
+    "temperature": 85,
+    "windSpeed": 15,
+    "conditions": ["Clear skies"]
+  },
+  "counters": {
+    "navigationDC": 0,
+    "water": 0,
+    "rations": 0,
+    "forageDC": 0,
+    "exhaustion": 0
+  }
+}

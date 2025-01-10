@@ -1,0 +1,92 @@
+{
+  "Port Nyanzaru": {
+    "description": "A bustling port city and the primary entry point to Chult.",
+    "navigationDC": 0,
+    "forageDC": 5,
+    "resources": {
+      "water": 5,
+      "rations": 10
+    },
+    "encounters": ["Wandering Merchant", "Festival Day"]
+  },
+  "Jungle": {
+    "description": "Dense jungle with dangerous creatures and treacherous terrain.",
+    "navigationDC": 15,
+    "forageDC": 15,
+    "resources": {
+      "water": 3,
+      "rations": -2
+    },
+    "encounters": ["Pack of Velociraptors", "Giant Spiders"]
+  },
+  "River": {
+    "description": "A winding river surrounded by dense jungle.",
+    "navigationDC": 15,
+    "forageDC": 12,
+    "resources": {
+      "water": 10,
+      "rations": 2
+    },
+    "encounters": ["Crocodile Ambush", "Friendly Fishermen"]
+  },
+  "Lake": {
+    "description": "A serene lake offering occasional respite for travelers.",
+    "navigationDC": 10,
+    "forageDC": 18,
+    "resources": {
+      "water": 2,
+      "rations": -1
+    },
+    "encounters": ["Shimmering Lights", "Sudden Storm"]
+  },
+  "Swamp": {
+    "description": "A murky and treacherous swamp filled with unseen dangers.",
+    "navigationDC": 15,
+    "forageDC": 18,
+    "resources": {
+      "water": 2,
+      "rations": -1
+    },
+    "encounters": ["Quicksand", "Swamp Wraith"]
+  },
+  "Coast": {
+    "description": "A rugged coastline with the remains of old shipwrecks.",
+    "navigationDC": 10,
+    "forageDC": 18,
+    "resources": {
+      "water": 2,
+      "rations": -1
+    },
+    "encounters": ["Pirate Raid", "Shipwreck"]
+  },
+  "Mountain": {
+    "description": "Towering peaks challenging even the most seasoned explorers.",
+    "navigationDC": 15,
+    "forageDC": 18,
+    "resources": {
+      "water": 2,
+      "rations": -1
+    },
+    "encounters": ["Rockslide", "Eagle Attack"]
+  },
+  "Wasteland": {
+    "description": "A barren wasteland where survival is the ultimate challenge.",
+    "navigationDC": 15,
+    "forageDC": 20,
+    "resources": {
+      "water": 1,
+      "rations": -2
+    },
+    "encounters": ["Sandstorm", "Scavengers"]
+  },
+  "Omu": {
+    "description": "A ruined city with hidden dangers and treasures.",
+    "navigationDC": 15,
+    "forageDC": 20,
+    "resources": {
+      "water": 1,
+      "rations": -5
+    },
+    "encounters": ["Undead Horde", "Hidden Trap"]
+  }
+}

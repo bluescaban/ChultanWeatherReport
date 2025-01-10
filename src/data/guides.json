@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Azaka",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "Jungle"
+    }
+  },
+  {
+    "name": "Eku",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "Omu"
+    }
+  },
+  {
+    "name": "Faroul & Gondolo",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "River"
+    }
+  },
+  {
+    "name": "Hew",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "Mountain"
+    }
+  },
+  {
+    "name": "Musharib",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "Mountain"
+    }
+  },
+  {
+    "name": "Qawasha",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "Jungle"
+    }
+  },
+  {
+    "name": "River Mist & Flask of Wine",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "River"
+    }
+  },
+  {
+    "name": "Salida",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "Jungle"
+    }
+  },
+  {
+    "name": "Shago",
+    "stats": {
+      "survival": 4,
+      "perception": 5,
+      "stealth": 3,
+      "favoredTerrain": "Jungle"
+    }
+  }
+]

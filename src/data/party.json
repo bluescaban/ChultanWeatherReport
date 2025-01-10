@@ -1,0 +1,9 @@
+{
+  "members": [
+    { "name": "Player1", "exhaustion": 1 },
+    { "name": "Player2", "exhaustion": 0 }
+  ],
+  "stats": {
+    "navigationDCModifier": 2
+  }
+}

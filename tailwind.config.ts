@@ -12,6 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        roll: "roll 1s ease-in-out", // Define the roll animation
+      },
+      keyframes: {
+        roll: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+      }, // This was missing
     },
   },
   plugins: [],

@@ -1,0 +1,96 @@
+{
+  "Fog": {
+    "description": "Fog reduces visibility and makes navigation difficult.",
+    "stats": {
+      "navigationDC": -5,
+      "visibility": 40,
+      "forageDC": 5
+    },
+    "effects": [
+      "Visibility limited to 40ft",
+      "-5 to navigation",
+      "Forage DC increases by 5"
+    ]
+  },
+  "Extreme Heat": {
+    "description": "Intense heat requires additional water and constitution checks.",
+    "stats": {
+      "exhaustionRisk": true,
+      "waterConsumptionIncrease": 1
+    },
+    "effects": [
+      "DC 15 Con save for medium/heavy armor or gain +1 exhaustion",
+      "Three gallons of water required per day instead of two"
+    ]
+  },
+  "Regular Temp": {
+    "description": "Normal weather conditions.",
+    "stats": {
+      "waterConsumption": 2
+    },
+    "effects": ["Water consumed at a rate of 2 gallons per day"]
+  },
+  "Heavy Wind": {
+    "description": "Strong winds create challenges for travel and combat.",
+    "stats": {
+      "exhaustionRisk": true,
+      "missileDisadvantage": true,
+      "navigationDC": 0
+    },
+    "effects": [
+      "DC 10 Con save to avoid +1 exhaustion if traveling",
+      "Missile weapon attacks are at disadvantage and range is halved",
+      "All checks relying on balance are at disadvantage"
+    ]
+  },
+  "Heavy Rain & Fog": {
+    "description": "Heavy rain combined with fog severely impacts navigation and visibility.",
+    "stats": {
+      "navigationDC": -5,
+      "visibility": 40,
+      "missileDisadvantage": true,
+      "forageDC": 13
+    },
+    "effects": [
+      "-5 to navigation (roll at disadvantage)",
+      "Visibility limited to 40ft",
+      "Missile weapon attacks at disadvantage with half range",
+      "All checks relying on grip (climbing, running, jumping, etc.) are at disadvantage",
+      "Foraging DC increases by 13"
+    ]
+  },
+  "Heavy Rain": {
+    "description": "Heavy rain makes navigation and physical activity more difficult.",
+    "stats": {
+      "navigationDisadvantage": true,
+      "visibility": 150,
+      "missileDisadvantage": true,
+      "forageDC": 8
+    },
+    "effects": [
+      "Navigation checks rolled at disadvantage",
+      "Visibility limited to 150ft",
+      "Missile weapon attacks at disadvantage with half range",
+      "All checks relying on grip (climbing, running, jumping, etc.) are at disadvantage",
+      "Foraging DC increases by 8"
+    ]
+  },
+  "Tropical Storm": {
+    "description": "Severe storms bring flooding and make travel almost impossible.",
+    "stats": {
+      "exhaustionRisk": true,
+      "navigationDisadvantage": true,
+      "visibility": 100,
+      "foragingImpossible": true,
+      "canoesSwamped": true
+    },
+    "effects": [
+      "+1 exhaustion if traveling, +1 exhaustion on failed DC Con save",
+      "Navigation checks rolled at disadvantage",
+      "All rivers flooded, canoes swamped",
+      "Visibility limited to 100ft",
+      "Missile weapons are impossible to use",
+      "Foraging and rain catchers are unusable"
+    ]
+  }
+}
