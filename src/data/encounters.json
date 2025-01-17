@@ -3,12 +3,12 @@
     {
       "title": "Wandering Merchant",
       "effect": "Gain supplies if negotiated successfully.",
-      "stats": { "rations": 2 }
+      "stats": {}
     },
     {
       "title": "Festival Day",
       "effect": "Boost party morale and gain supplies.",
-      "stats": { "rations": 3 }
+      "stats": {}
     }
   ],
   "Jungle": [
@@ -27,72 +27,72 @@
     {
       "title": "Crocodile Ambush",
       "effect": "Lose supplies unless defeated.",
-      "stats": { "rations": -2 }
+      "stats": {}
     },
     {
       "title": "Friendly Fishermen",
       "effect": "Gain food and water supplies.",
-      "stats": { "rations": 2, "water": 1 }
+      "stats": {}
     }
   ],
   "Lake": [
     {
       "title": "Shimmering Lights",
       "effect": "Discover a hidden fishing spot and gain water supplies.",
-      "stats": { "water": 3 }
+      "stats": {}
     },
     {
       "title": "Sudden Storm",
       "effect": "Lose time and supplies due to the storm.",
-      "stats": { "rations": -2, "navigationDC": 5 }
+      "stats": {}
     }
   ],
   "Swamp": [
     {
       "title": "Quicksand",
       "effect": "Lose supplies and test navigation skills.",
-      "stats": { "navigationDC": 18 }
+      "stats": {}
     },
     {
       "title": "Swamp Wraith",
       "effect": "Encounter a hostile spirit draining the party's energy.",
-      "stats": { "exhaustion": 2 }
+      "stats": {}
     }
   ],
   "Coast": [
     {
       "title": "Pirate Raid",
       "effect": "Fend off a pirate raid to protect supplies.",
-      "stats": { "rations": -3 }
+      "stats": {}
     },
     {
       "title": "Shipwreck",
       "effect": "Discover valuable resources at a shipwreck.",
-      "stats": { "rations": 4, "water": 2 }
+      "stats": {}
     }
   ],
   "Mountain": [
     {
       "title": "Rockslide",
       "effect": "Lose time and supplies.",
-      "stats": { "rations": -1, "navigationDC": 25 }
+      "stats": {}
     },
     {
       "title": "Eagle Attack",
       "effect": "Fend off a giant eagle attacking the party.",
-      "stats": { "exhaustion": 1 }
+      "stats": {}
     }
   ],
   "Wasteland": [
     {
       "title": "Sandstorm",
       "effect": "Lose supplies and visibility in a sudden sandstorm.",
-      "stats": { "rations": -3, "navigationDC": 30 }
+      "stats": {}
     },
     {
       "title": "Scavengers",
       "effect": "Defend against scavengers trying to steal supplies.",
-      "stats": { "rations": -2 }
+      "stats": {}
     }
   ],
   "Omu": [

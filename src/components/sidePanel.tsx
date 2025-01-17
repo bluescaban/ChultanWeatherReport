@@ -60,9 +60,12 @@ export default function SidePanel() {
         {temperature !== null ? `${temperature}°F` : "Loading..."}
       </p>
 
-      {/* Windspeed */}
+      {/* Windspeed Section */}
       <p className="text-xs text-gray-700 text-center mb-6">
-        Windspeed: {report.weather?.windSpeed || "N/A"} mph
+        <span className="font-bold">Windspeed:</span>{" "}
+        {report.weather?.stats?.windSpeed !== undefined
+          ? `${report.weather.stats.windSpeed} mph`
+          : "N/A"}
       </p>
 
       {/* Weather Description */}

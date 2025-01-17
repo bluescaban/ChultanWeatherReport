@@ -27,11 +27,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{
+          fontFamily: "'Satoshi', var(--font-geist-sans), sans-serif", // Add Satoshi here
+        }}
       >
-        {/* Wrap the children in WeatherProvider */}
-        <WeatherProvider>
-          {children}
-        </WeatherProvider>
+        <WeatherProvider>{children}</WeatherProvider>
       </body>
     </html>
   );

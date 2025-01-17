@@ -25,6 +25,10 @@ const locations: Locations = locationsData as Locations;
 const initialReport: Report = {
     ...initialReportData,
     location: initialReportData.location as LocationKeys, // Ensure `location` matches `LocationKeys`
+    counters: {
+      ...initialReportData.counters,
+      forageDC: initialReportData.counters?.forageDC ?? 10, 
+    }
 };
 
 export const WeatherProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -41,6 +45,16 @@ export const WeatherProvider: React.FC<{ children: React.ReactNode }> = ({ child
     }));
   }, []);
 
+  const adjustCounter = useCallback((type: "water" | "rations", amount: number) => {
+    setReport((prev) => ({
+      ...prev,
+      counters: {
+        ...prev.counters,
+        [type]: (prev.counters[type] || 0) + amount,
+      },
+    }));
+  }, []);
+
   // Function to roll for weather
   const rollForWeather = useCallback(() => {
     try {
@@ -48,6 +62,15 @@ export const WeatherProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
       // Assert that newCondition is a valid key of WeatherData
       const weatherStats = weather[newCondition as keyof typeof weather]?.stats || {};
+
+    // Type predicate to validate missileStatus
+    const isMissileStatus = (value: unknown): value is "normal" | "disadvantage" | "impossible" =>
+      value === "normal" || value === "disadvantage" || value === "impossible";
+
+    // Validate and assign missileStatus
+    const missileStatus = isMissileStatus(weatherStats.missileStatus)
+      ? weatherStats.missileStatus
+      : "normal"; // Default to "normal" if invalid
 
       // Check if specific disadvantage flags exist
       const navigationDisadvantage = 'navigationDisadvantage' in weatherStats && !!weatherStats.navigationDisadvantage;
@@ -63,6 +86,7 @@ export const WeatherProvider: React.FC<{ children: React.ReactNode }> = ({ child
             ...weatherStats,
             navigationDisadvantage,
             forageDisadvantage,
+            missileStatus
           },
           temperature: newTemperature,
           conditions: [newCondition],
@@ -81,11 +105,18 @@ export const WeatherProvider: React.FC<{ children: React.ReactNode }> = ({ child
   }, [rollForWeather]);
   
   const toggleDayNight = () => {
-    setReport((prev) => ({
-      ...prev,
-      isDay: !prev.isDay, // Toggle the `isDay` flag
-    }));
-  };  
+    setReport((prev) => {
+      const wasDay = prev.isDay; // Check if it was day
+      return {
+        ...prev,
+        isDay: !wasDay, // Toggle the `isDay` flag
+        counters: {
+          ...prev.counters,
+          navigationDC: (prev.counters.navigationDC || 0) + (wasDay ? 5 : -5), // Add 5 when switching to night, subtract 5 when switching to day
+        },
+      };
+    });
+  };
 
   const rerollEncounter = () => {
     // Fetch possible encounters for the current location from encounters.json
@@ -159,7 +190,8 @@ export const WeatherProvider: React.FC<{ children: React.ReactNode }> = ({ child
         toggleDayNight,
         changeLocation,
         rerollEncounter,
-        rollForWeather, // Ensure this matches the updated function name
+        rollForWeather,
+        adjustCounter,
     }}
     >
     {children}

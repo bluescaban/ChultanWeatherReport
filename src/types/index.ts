@@ -19,11 +19,12 @@ export type WeatherData = {
       forageDC?: number;
       exhaustionRisk?: boolean;
       waterConsumptionIncrease?: number;
-      missileDisadvantage?: boolean;
+      missileStatus?: "normal" | "disadvantage" | "impossible";
       navigationDisadvantage?: boolean;
       forageDisadvantage?: boolean;
       foragingImpossible?: boolean;
       canoesSwamped?: boolean;
+      windSpeed?: number;
     };
     effects: string[];
   };
@@ -38,10 +39,14 @@ export type WeatherStats = {
     exhaustion?: number;
     navigationDisadvantage?: boolean;
     forageDisadvantage?: boolean;
+    visibility?: number;
+    missileStatus?: "normal" | "disadvantage" | "impossible";
+    foragingImpossible?: boolean;
+    windSpeed?: number;
   };
   temperature?: number;
   windSpeed?: number;
-  conditions?: string[]; // Weather conditions affecting gameplay
+  conditions?: string[];
 };
 
 export type LocationStats = {
@@ -85,8 +90,8 @@ export type PartyStats = {
 export type Report = {
   location: LocationKeys;
   isDay: boolean;
-  encounter?: Encounter | null; // Optional encounter for the current location
-  weather?: WeatherStats; // Current weather stats
+  encounter?: Encounter | null;
+  weather?: WeatherStats;
   counters: {
     water?: number;
     rations?: number;
@@ -95,15 +100,18 @@ export type Report = {
     exhaustion?: number;
     navigationDisadvantage?: boolean;
     forageDisadvantage?: boolean;
+    visibility?: number;
+    missileStatus?: "normal" | "disadvantage" | "impossible";
   };
 };
 
 export type WeatherContextValue = {
   report: Report;
-  temperature: number; // Current temperature (defaulted to 85 if not set)
-  weatherCondition: keyof WeatherData; // Ensures valid weather condition keys
+  temperature: number;
+  weatherCondition: keyof WeatherData;
   toggleDayNight: () => void;
   changeLocation: (location: LocationKeys) => void;
   rerollEncounter: () => void;
   rollForWeather: () => void;
+  adjustCounter: (type: "water" | "rations", amount: number) => void;
 };

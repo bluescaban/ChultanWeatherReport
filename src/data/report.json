@@ -9,10 +9,12 @@
       "forageDC": 0,
       "navigationDC": 0,
       "navigationDisadvantage": false,
-      "forageDisadvantage": false
+      "forageDisadvantage": false,
+      "visibility": 500,
+      "missileDisadvantage": false
     },
     "temperature": 85,
-    "windSpeed": 15,
+    "windSpeed": 0,
     "conditions": ["Clear skies"]
   },
   "counters": {
@@ -20,6 +22,7 @@
     "water": 0,
     "rations": 0,
     "forageDC": 0,
-    "exhaustion": 0
+    "exhaustion": 0,
+    "visibility": 500
   }
 }
