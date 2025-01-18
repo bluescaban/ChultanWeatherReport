@@ -7,7 +7,8 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Wandering Merchant", "Festival Day"]
+    "encounters": ["Wandering Merchant", "Festival Day"],
+    "image": "/images/backgrounds/port-nyanzaru.jpg"
   },
   "Jungle": {
     "description": "Dense jungle with dangerous creatures and treacherous terrain.",
@@ -17,7 +18,8 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Pack of Velociraptors", "Giant Spiders"]
+    "encounters": ["Pack of Velociraptors", "Giant Spiders"],
+    "image": "/images/backgrounds/jungle.jpg"
   },
   "River": {
     "description": "A winding river surrounded by dense jungle.",
@@ -27,7 +29,8 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Crocodile Ambush", "Friendly Fishermen"]
+    "encounters": ["Crocodile Ambush", "Friendly Fishermen"],
+    "image": "/images/backgrounds/river.jpg"
   },
   "Lake": {
     "description": "A serene lake offering occasional respite for travelers.",
@@ -37,7 +40,8 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Shimmering Lights", "Sudden Storm"]
+    "encounters": ["Shimmering Lights", "Sudden Storm"],
+    "image": "/images/backgrounds/lake.jpg"
   },
   "Swamp": {
     "description": "A murky and treacherous swamp filled with unseen dangers.",
@@ -47,7 +51,8 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Quicksand", "Swamp Wraith"]
+    "encounters": ["Quicksand", "Swamp Wraith"],
+    "image": "/images/backgrounds/swamp.jpg"
   },
   "Coast": {
     "description": "A rugged coastline with the remains of old shipwrecks.",
@@ -57,7 +62,8 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Pirate Raid", "Shipwreck"]
+    "encounters": ["Pirate Raid", "Shipwreck"],
+    "image": "/images/backgrounds/coast.jpg"
   },
   "Mountain": {
     "description": "Towering peaks challenging even the most seasoned explorers.",
@@ -67,7 +73,8 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Rockslide", "Eagle Attack"]
+    "encounters": ["Rockslide", "Eagle Attack"],
+    "image": "/images/backgrounds/mountain.jpg"
   },
   "Wasteland": {
     "description": "A barren wasteland where survival is the ultimate challenge.",
@@ -77,9 +84,10 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Sandstorm", "Scavengers"]
+    "encounters": ["Sandstorm", "Scavengers"],
+    "image": "/images/backgrounds/wasteland.jpg"
   },
-  "Omu": {
+  "Ruins": {
     "description": "A ruined city with hidden dangers and treasures.",
     "navigationDC": 15,
     "forageDC": 0,
@@ -87,6 +95,7 @@
       "water": 0,
       "rations": 0
     },
-    "encounters": ["Undead Horde", "Hidden Trap"]
+    "encounters": ["Undead Horde", "Hidden Trap"],
+    "image": "/images/backgrounds/ruins.jpeg"
   }
 }

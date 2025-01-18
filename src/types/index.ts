@@ -70,7 +70,7 @@ export type Locations = {
     | "Coast"
     | "Mountain"
     | "Wasteland"
-    | "Omu"]: LocationStats;
+    | "Ruins"]: LocationStats;
 };
 
 export type LocationKeys = keyof Locations;

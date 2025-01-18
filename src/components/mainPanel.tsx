@@ -6,10 +6,11 @@ import { useWeather } from "../context/weatherContext";
 import guidesData from "../data/guides.json";
 
 export default function MainPanel() {
-    const { report, weatherCondition, rollForWeather, rerollEncounter, adjustCounter } = useWeather();
+    const { report, weatherCondition, rollForWeather, rerollEncounter } = useWeather();
     const [selectedGuide, setSelectedGuide] = useState(guidesData[0]);
     const [isModalOpen, setIsModalOpen] = useState(false);
-
+    const [water, setWater] = useState(report.counters.water || 0);
+    const [rations, setRations] = useState(report.counters.rations || 0);
     const [isRolling, setIsRolling] = useState(false);
 
   const handleRoll = () => {
@@ -21,6 +22,16 @@ export default function MainPanel() {
       rollForWeather();
       setIsRolling(false);
     }, 1000);
+  };
+
+  const handleWaterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = parseInt(e.target.value, 10) || 0;
+    setWater(newValue); // Update water state directly
+  };
+
+  const handleRationsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = parseInt(e.target.value, 10) || 0;
+    setRations(newValue); // Update rations state directly
   };
 
   return (
@@ -222,41 +233,23 @@ export default function MainPanel() {
           {/* Water Counter */}
           <div className="bg-white bg-opacity-40 backdrop-blur-md rounded-lg p-4 shadow-md text-center">
             <h4 className="text-sm font-semibold text-gray-800">Water</h4>
-            <p className="text-gray-600 mt-2">{report.counters.water || 0}</p>
-            <div className="flex justify-center mt-2 space-x-2">
-              <button
-                onClick={() => adjustCounter("water", 1)}
-                className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
-              >
-                +
-              </button>
-              <button
-                onClick={() => adjustCounter("water", -1)}
-                className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
-              >
-                -
-              </button>
-            </div>
+            <input
+              type="number"
+              className="w-full mt-2 text-center border rounded-lg text-gray-600"
+              value={water}
+              onChange={handleWaterChange}
+            />
           </div>
 
           {/* Rations Counter */}
           <div className="bg-white bg-opacity-40 backdrop-blur-md rounded-lg p-4 shadow-md text-center">
             <h4 className="text-sm font-semibold text-gray-800">Rations</h4>
-            <p className="text-gray-600 mt-2">{report.counters.rations || 0}</p>
-            <div className="flex justify-center mt-2 space-x-2">
-              <button
-                onClick={() => adjustCounter("rations", 1)}
-                className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
-              >
-                +
-              </button>
-              <button
-                onClick={() => adjustCounter("rations", -1)}
-                className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
-              >
-                -
-              </button>
-            </div>
+            <input
+              type="number"
+              className="w-full mt-2 text-center border rounded-lg text-gray-600"
+              value={rations}
+              onChange={handleRationsChange}
+            />
           </div>
 
         </div>

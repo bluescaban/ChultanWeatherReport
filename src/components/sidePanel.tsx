@@ -7,13 +7,22 @@ import locations from "../data/locations.json";
 import weatherDataRaw from "../data/weather.json";
 import { WeatherData } from "../types";
 
-export default function SidePanel() {
+interface SidePanelProps {
+  onLocationChange: (location: LocationKeys) => void
+}
+
+export default function SidePanel({ onLocationChange }: SidePanelProps) {
   const { report, temperature, weatherCondition, toggleDayNight, changeLocation } = useWeather();
   const weatherData: WeatherData = weatherDataRaw as WeatherData;
 
   const currentWeather = weatherData[weatherCondition] || {
     description: "No description available.",
     effects: ["No effects available."],
+  };
+
+  const handleLocationSelect = (location: LocationKeys) => {
+    changeLocation(location); // Update the weather context
+    onLocationChange(location); // Notify parent to update background
   };
 
   return (
@@ -24,10 +33,12 @@ export default function SidePanel() {
         <button
           onClick={toggleDayNight}
           aria-label={report.isDay ? "Switch to Night Mode" : "Switch to Day Mode"}
-          className="flex items-center justify-center w-12 h-12 border-2 border-gray-300 bg-gray-100 rounded-full hover:bg-blue-200 hover:border-blue-400 transition-all"
+          className={`flex items-center justify-center w-12 h-12 border-2 ${
+            report.isDay ? "bg-gray-100 hover:bg-blue-200 border-gray-300" : "bg-black text-white border-black"
+          } rounded-full transition-all`}
         >
           <Image
-            src={report.isDay ? "/images/sun.png" : "/images/moon.png"}
+            src={report.isDay ? "/images/sun.png" : "/images/whitemoon.png"}
             alt={report.isDay ? "Day Mode" : "Night Mode"}
             width={32}
             height={32}
@@ -44,7 +55,7 @@ export default function SidePanel() {
         <select
           id="location-select"
           value={report.location}
-          onChange={(e) => changeLocation(e.target.value as LocationKeys)}
+          onChange={(e) => handleLocationSelect(e.target.value as LocationKeys)}
           className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm"
         >
           {Object.keys(locations).map((loc) => (
